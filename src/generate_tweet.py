@@ -27,8 +27,7 @@ def generate_tweet():
     popular_artilces = get_popular_article()
     ai_article = choose_ai_article(popular_artilces)
     tweet = summary_tweet(ai_article)
-    print("ツイート")
-    print(tweet)
+    print(f"{tweet=}")
 
     post_tweet(tweet)
 
