@@ -23,7 +23,7 @@ def post_tweet(tweet: str) -> None:
     client.create_tweet(text=tweet)
 
 
-def generate_tweet():
+def lambda_handler():
     popular_artilces = get_popular_article()
     ai_article = choose_ai_article(popular_artilces)
     tweet = summary_tweet(ai_article)
@@ -32,5 +32,4 @@ def generate_tweet():
     post_tweet(tweet)
 
 
-if __name__ == "__main__":
-    generate_tweet()
+lambda_handler()
